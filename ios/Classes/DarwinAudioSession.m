@@ -689,6 +689,7 @@ static NSHashTable<DarwinAudioSession *> *sessions = nil;
     if (sessions.allObjects.count == 0) {
         //NSLog(@"removing notification observers");
         [[NSNotificationCenter defaultCenter] removeObserver:self];
+        sessions = nil;
     }
 }
 
